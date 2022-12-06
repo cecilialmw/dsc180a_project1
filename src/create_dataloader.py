@@ -21,8 +21,8 @@ from torch.utils.data import DataLoader
 class ImportData(Dataset):
     def __init__(self, df, max_size):
         
-        self.all_path = df.iloc[:,-1].values
-        y = df.iloc[:,0].values
+        self.all_path = df['filepaths'].values
+        y = df['bnpp_value_log'].values
 
         self.y_train=torch.tensor(y,dtype=torch.float32).unsqueeze(1)
         
