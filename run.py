@@ -59,6 +59,7 @@ def main(targets):
         model_test = resnet152()
 
     resolution = targets[2]
+    resolution = int(resolution)
     if rosolution == 64:
         res_name = '64x64'
     else:
