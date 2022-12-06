@@ -38,9 +38,10 @@ from evaluate_test import test_model
 from evaluate_test import test_mae
 from evaluate_test import plot_pearson_r
 
-TEST_PATH = '/test/testdata/test.csv'
-TRAIN_PATH = '/test/testdata/train.csv'
-VAL_PATH = '/test/testdata/val.csv'
+TEST_PATH = '/home/anw008/private/DSC180A-Methodology-5/test/testdata/test.csv'
+TRAIN_PATH = '/home/anw008/private/DSC180A-Methodology-5/test/testdata/train.csv'
+VAL_PATH = '/home/anw008/private/DSC180A-Methodology-5/test/testdata/val.csv'
+
 
 def main(targets):
     '''
