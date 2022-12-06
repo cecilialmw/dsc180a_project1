@@ -13,6 +13,8 @@ from torch import Tensor
 from torch.utils.data import Dataset
 from torch.utils.data import DataLoader
 
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
 class resnet152(nn.Module):
 
     """

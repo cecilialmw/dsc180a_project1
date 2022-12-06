@@ -34,10 +34,9 @@ def plot_both_loss(all_train_loss, all_val_loss, model_name, resolution):
     plt.ylabel('Customize MAE Loss')
     plt.xlabel('Epoch Number')
     plt.title('MAE Loss of {} with resolution {}'.format(model_name, resolution))
+    plt.savefig('output/loss_{}_{}.png'.format(model_name, resolution))
     plt.show()
-    
-    fig = train_val_loss.get_figure()
-    fig.save('loss_{}_{}.png'.format(model_name, resolution))
+
 
     return
     
@@ -75,7 +74,9 @@ def plot_BNPP(y_test, y_true, y_image, model_name, resolution):
     axs[1].title.set_text('True = {}, Inferred = {}'.format(BNPP_true[1], BNPP_test[1]))
     
     fig.suptitle('Model {} with resolution {}'.format(model_name, resolution), y=0.73)
+    plt.savefig('output/BNPP_{}_{}.png'.format(model_name, resolution))
     plt.show()
+
     
     return
 
@@ -95,6 +96,7 @@ def plot_pearson_r(y_test, y_true, model_name, resolution, color = "#4CB391"):
     plt.title('model {} with resoltuon {} have r = {}'.format(model_name, resolution, corr))
     plt.xlabel('True BNPP')
     plt.ylabel('Inferred BNPP')
+    plt.savefig('output/pearson_{}_{}.png'.format(model_name, resolution))
     plt.show()
 
     return corr
@@ -113,6 +115,8 @@ def plot_roc_curve(y_test, y_true, threshold, model_name, resolution):
     plt.ylabel('True positive rate')
     plt.title('ROC curve of model {} with resolution {}'.format(model_name, resolution))
     plt.legend(loc='best')
+    plt.savefig('output/roc_{}_{}.png'.format(model_name, resolution))
+
     plt.show()
 
     return roc_auc
@@ -130,6 +134,8 @@ def plot_confusion_matrix(y_test, y_true, threshold, model_name, resolution):
     plt.title('Confusion matrix of model {} with resolution {}'.format(model_name, resolution))
     plt.xlabel('Prediction')
     plt.ylabel('True')
+    plt.savefig('output/cm_{}_{}.png'.format(model_name, resolution))
+
     plt.show()
 
     return f1_score
