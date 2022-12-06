@@ -81,7 +81,7 @@ def main(targets):
         
         model_trained, train_loss, val_loss = train_val_model(model = model_test,
                                                               batch_size = 8,
-                                                              num_epochs = 2,  
+                                                              num_epochs = 5,  
                                                               learning_rate = lr,
                                                               train_loader = train_loader, val_loader = val_loader)
         
@@ -98,7 +98,7 @@ def main(targets):
             f.write('The true log BNPP value are: ' + str(y_true))
             f.write('The inferred log BNPP value are: ' + str(y_test))
             f.write('The test MAE is: ' + str(test_mae_out))
-            f.write('The pearson r coefficient is: ' + str(pearson))
+            #f.write('The pearson r coefficient is: ' + str(pearson))
             f.write('The ROC-AUC score is: ' + str(roc))
             f.write('The F1 score is: ' + str(f1))
         

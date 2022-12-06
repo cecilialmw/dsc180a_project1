@@ -143,6 +143,8 @@ def plot_confusion_matrix(y_test, y_true, threshold, model_name, resolution):
 def test_analysis(model, model_name, resolution, loader, threshold = 400):
     # get test results
     y_test, y_true, y_image = test_model(model, loader)
+    print(y_test)
+    print(y_true)
     
     # get test MAE
     #test_mae = np.around(np.abs(y_test - y_true).mean(), 3)
@@ -152,7 +154,8 @@ def test_analysis(model, model_name, resolution, loader, threshold = 400):
     #plot_BNPP(y_test, y_true, y_image, model_name, resolution)
     
     # plot pearson r
-    pearson = plot_pearson_r(y_test, y_true, model_name, resolution, color = "#4CB391")
+    #pearson = plot_pearson_r(y_test, y_true, model_name, resolution, color = "#4CB391")
+    pearson = 0
     
     # plot auc-roc
     roc = plot_roc_curve(y_test, y_true, threshold, model_name, resolution)
