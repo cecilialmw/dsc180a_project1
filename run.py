@@ -80,7 +80,7 @@ def main(targets):
         
         model_trained, train_loss, val_loss = train_val_model(model = model_test,
                                                               batch_size = 8,
-                                                              num_epochs = 20,  
+                                                              num_epochs = 2,  
                                                               learning_rate = lr,
                                                               train_loader = train_loader, val_loader = val_loader)
         
