@@ -9,6 +9,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns 
 from scipy.stats import pearsonr
+from sklearn.metrics import roc_curve
+from sklearn.metrics import roc_auc_score
+from sklearn.metrics import confusion_matrix
 
 import torch 
 from  torchvision import transforms, models
