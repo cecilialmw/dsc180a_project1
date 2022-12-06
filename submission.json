@@ -1,4 +1,4 @@
 {   
-    "dockerhub-id": "cecilia00mwl/dsc180a_project1:latest"
+    "dockerhub-id": "cecilia00mwl/dsc180a_project1:latest",
     "build-script": "python run.py test resnet152 64"
 }
