@@ -56,8 +56,8 @@ def test_model(model, loader):
 
         y_test.append(target.detach().cpu())
         y_true.append(labels[0].detach().cpu())
-        if i < 5:
-            y_image.append(data.detach().cpu())
+        # if i < 5:
+        #     y_image.append(data.detach().cpu())
                 
     return np.array(y_test), np.array(y_true), y_image
 
@@ -149,7 +149,7 @@ def test_analysis(model, model_name, resolution, loader, threshold = 400):
     #print('Test MAE of model {} is {}'.format(model_name, test_mae))
     
     # plot image with true bnpp and inferred bnpp
-    plot_BNPP(y_test, y_true, y_image, model_name, resolution)
+    #plot_BNPP(y_test, y_true, y_image, model_name, resolution)
     
     # plot pearson r
     pearson = plot_pearson_r(y_test, y_true, model_name, resolution, color = "#4CB391")
