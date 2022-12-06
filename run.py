@@ -63,7 +63,7 @@ def main(targets):
     resolution = targets[1]
     print('res: ' + resolution)
     resolution = int(resolution)
-    if rosolution == 64:
+    if resolution == 64:
         res_name = '64x64'
     else:
         res_name = '224x224'
