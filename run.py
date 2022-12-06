@@ -84,7 +84,7 @@ def main(targets):
                                                               learning_rate = lr,
                                                               train_loader = train_loader, val_loader = val_loader)
         
-        plot_both_loss(train_loss_resnet152_224, val_loss_resnet152_224, model_name, res_name)
+        plot_both_loss(train_loss, val_loss, model_name, res_name)
         y_test, y_true, test_mae_out, pearson, roc, f1 = test_analysis(model_trained, model_name, resolution, test_loader, threshold = 400)
         
         test_mae_out = test_mae(y_test, y_true)
