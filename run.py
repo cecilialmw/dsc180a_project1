@@ -50,7 +50,9 @@ def main(targets):
     `main` runs the targets in order of data=>analysis=>model.
     '''
 
+    print(targets)
     model_name = targets[1]
+    print('model:' + model_name)
     if model_name == 'vgg16':
         model_test = vgg16()
     elif model_name == 'vgg19':
@@ -59,6 +61,7 @@ def main(targets):
         model_test = resnet152()
 
     resolution = targets[2]
+    print('res: ' + resolution)
     resolution = int(resolution)
     if rosolution == 64:
         res_name = '64x64'
