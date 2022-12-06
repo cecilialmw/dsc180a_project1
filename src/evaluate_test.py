@@ -145,7 +145,7 @@ def test_analysis(model, model_name, resolution, loader, threshold = 400):
     y_test, y_true, y_image = test_model(model, loader)
     
     # get test MAE
-    test_mae = np.around(np.abs(y_test - y_true).mean(), 3)
+    #test_mae = np.around(np.abs(y_test - y_true).mean(), 3)
     #print('Test MAE of model {} is {}'.format(model_name, test_mae))
     
     # plot image with true bnpp and inferred bnpp
@@ -160,5 +160,5 @@ def test_analysis(model, model_name, resolution, loader, threshold = 400):
     # plot confusion matrix
     f1 = plot_confusion_matrix(y_test, y_true, threshold, model_name, resolution)
 
-    return y_test, y_true, test_mae, pearson, roc, f1
+    return y_test, y_true, pearson, roc, f1
 
