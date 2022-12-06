@@ -1,0 +1,3 @@
+{
+    "build-script": "python run.py test vgg16"
+}

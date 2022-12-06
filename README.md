@@ -1,1 +1,2 @@
-# dsc180a_project1
+PLEASE READ ME
+;)
