@@ -37,6 +37,7 @@ from evaluate_test import plot_both_loss
 from evaluate_test import test_model
 from evaluate_test import test_mae
 from evaluate_test import plot_pearson_r
+from evaluate_test import test_analysis
 
 TEST_PATH = '/home/mel011/private/dsc180a_project1/test/testdata/test.csv'
 TRAIN_PATH = '/home/mel011/private/dsc180a_project1/test/testdata/train.csv'
