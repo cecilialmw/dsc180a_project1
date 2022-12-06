@@ -51,7 +51,7 @@ def main(targets):
     '''
 
     print(targets)
-    model_name = targets[0]
+    model_name = targets[1]
     print('model:' + model_name)
     if model_name == 'vgg16':
         model_test = vgg16()
@@ -60,7 +60,7 @@ def main(targets):
     else:
         model_test = resnet152()
 
-    resolution = targets[1]
+    resolution = targets[2]
     print('res: ' + resolution)
     resolution = int(resolution)
     if resolution == 64:
