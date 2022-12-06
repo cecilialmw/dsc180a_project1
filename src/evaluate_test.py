@@ -57,7 +57,7 @@ def test_model(model, loader):
 
         target = model(data)
 
-        y_test.append(target.detach().cpu())
+        y_test.append(target[0].detach().cpu())
         y_true.append(labels[0].detach().cpu())
         # if i < 5:
         #     y_image.append(data.detach().cpu())
